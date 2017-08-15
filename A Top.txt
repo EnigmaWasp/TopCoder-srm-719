@@ -1,0 +1,18 @@
+import java.util.*;
+import java.util.regex.*;
+import java.text.*;
+import java.math.*;
+
+public class LongLiveZhangzj
+{
+	public int donate(String[] speech, String[] words)
+	{
+		int result = 0;
+		for (String word : words) {
+			for (String s : speech) {
+				if (s.equals(word)) result += 1;
+			}
+		}
+		return result;
+	}
+}

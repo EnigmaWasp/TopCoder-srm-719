@@ -1,0 +1,19 @@
+import java.util.*;
+import java.util.regex.*;
+import java.text.*;
+import java.math.*;
+
+public class LongMansionDiv2
+{
+	public long minimalTime(int M, int[] t)
+	{
+		long min = (long)t[0];
+		for (int i = 0 ; i < t.length ; i++)
+			min = Math.min((long)t[i] , min);
+		long result = 0;
+		for (int i = 0 ; i < t.length ; i++)
+			result += (long)t[i] * 1L;
+		result += 1L * (M - 1) * min;
+		return result;
+	}
+}
